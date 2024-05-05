@@ -1,5 +1,5 @@
 <?php
-session_start(); // THIS CODE IS FOR THE LOGIN NOTIFICATION IF VALID USER OR NOT. 
+session_start(); // THIS CODE IS FOR THE LOGIN NOTIFICATION IF VALID USER OR NOT.
 ?>
 <!DOCTYPE html>
 <html lang="en">
