@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --text-mint: #78C2AD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.navbar {
+    background-color: #78C2AD;
+}
+
+/* THIS USE FOR THE DARK AND LIGHT THEME BASED ON BOOTSTRAP 5 */
+.nav-link {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+/* Hover effect for anchor tags */
+li.nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Set the hover background color */
+    margin: 0;
+}
+
+.adminpanel {
+    font-weight: 700;
+    margin-top: 25px;
+    text-align: center;
+}
+
+#sidebar {
+    position: fixed;
+    height: 100vh;
+    width: 250px;
+    background-color: #78C2AD;
+    transition: margin 0.5s;
+}
+
+.dropdown-toggle, .dropdown-item {
+    color: inherit; /* Use the inherit color from parent */
+    text-decoration: none; /* Remove default underline */
+}
+
+#sidebar-dropdown {
+    margin-top: 25px;
+    text-align: center;
+}
+
+#sidebar-link {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+#sidebar-link i {
+    margin-right: 10px;
+    /* Adjust the margin as needed */
+}
+
+.img-circle {
+    user-select: none;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+#content {
+    margin-left: 250px;
+    padding: 30px;
+    /* padding: 0 30px; /* Top and bottom padding is 0, left and right padding is 30px */
+    transition: margin 0.5s;
+}
+
+.dashboard-span {
+    color: #78C2AD;
+}
+
+#breadcrumb-align-center {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+@media (max-width: 575px) {
+    #breadcrumb-align-center {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+}
+
+@media (min-width: 1350px) {
+    .card {
+        width: 20% !important;
+    }
+}
+
+@media (min-width: 912px) {
+    #navbarTop {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    #navbarTop {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #navbarTop {
+        display: block;
+    }
+
+    #sidebar {
+        margin-left: -250px;
+    }
+
+    #content {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #navbar-toggler {
+        display: block;
+    }
+
+    #sidebar {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    #navbar-toggler {
+        display: none;
+    }
+
+    #sidebar {
+        display: block;
+    }
+}
