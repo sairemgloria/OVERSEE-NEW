@@ -88,6 +88,32 @@ li.nav-item:hover {
     justify-content: right;
 }
 
+.display-cards {
+    display: flex;
+    align-items: center;
+    padding: auto 2rem;
+}
+
+#logo-display {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: transform 0.3s ease-in-out; /* Add smooth transition */
+    transform-origin: right center; /* Set transform origin to the right */
+    font-size: 90px;
+    /* color: rgba(0, 0, 0, 0.250); */
+}
+
+#logo-display:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#material-icon {
+    /* font-size: medium; */
+    vertical-align: middle;
+}
+
 @media (max-width: 575px) {
     #breadcrumb-align-center {
         display: flex;

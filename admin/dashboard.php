@@ -8,7 +8,7 @@ include("templates/sidebar.php");
 <!-- Page Content -->
 <div id="content">
     <div class="container-fluid">
-        <!-- added -->
+        <!-- added breadcrumb features -->
         <div class="row">
             <div class="col-sm-6">
                 <h1 class="my-0 my-md-3 my-lg-3 fw-bold"><span class="dashboard-span fw-bold">|</span> Dashboard</h1>
@@ -20,65 +20,73 @@ include("templates/sidebar.php");
                 </ol>
             </div>
         </div>
-        <!-- added -->
+        <!-- added breadcrumb features -->
         <!-- <h1 class="dashboard my-4 fw-bold"><span class="dashboard-span fw-bold">|</span> Dashboard</h1> -->
         <hr class="hr-element">
         <div class="col-sm-12">
             <div class="row gap-4 p-3 justify-content-evenly">
-                <div class="card border-success mb-3 p-0">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Primary card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="card border-success mb-auto p-0">
+                    <div class="display-cards">
+                        <div class="card-body">
+                            <?php
+                            $sql = "SELECT * FROM admins";
+                            $query = $conn->query($sql);
+                            ?>
+                            <h1 class="card-title"><?= $query->num_rows; ?></h1>
+                            <p class="card-text">Admins</p>
+                        </div>
+                        <i class="material-icons" id="logo-display">manage_accounts</i>
+                    </div>
+                    <div class="card-footer text-center bg-light">
+                        <a href="#" class="text-dark" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
                     </div>
                 </div>
-                <div class="card border-success mb-3 p-0">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Primary card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="card border-success mb-auto p-0">
+                    <div class="display-cards">
+                        <div class="card-body">
+                            <?php
+                            $sql = "SELECT * FROM admins";
+                            $query = $conn->query($sql);
+                            ?>
+                            <h1 class="card-title"><?= $query->num_rows; ?></h1>
+                            <p class="card-text">Admins</p>
+                        </div>
+                        <i class="material-icons" id="logo-display">manage_accounts</i>
+                    </div>
+                    <div class="card-footer text-center bg-light">
+                        <a href="#" class="text-dark" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
                     </div>
                 </div>
-                <div class="card border-success mb-3 p-0">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Primary card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="card border-success mb-auto p-0">
+                    <div class="display-cards">
+                        <div class="card-body">
+                            <?php
+                            $sql = "SELECT * FROM admins";
+                            $query = $conn->query($sql);
+                            ?>
+                            <h1 class="card-title"><?= $query->num_rows; ?></h1>
+                            <p class="card-text">Admins</p>
+                        </div>
+                        <i class="material-icons" id="logo-display">manage_accounts</i>
+                    </div>
+                    <div class="card-footer text-center bg-light">
+                        <a href="#" class="text-dark" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
                     </div>
                 </div>
-                <div class="card border-success mb-3 p-0">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Primary card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="card border-success mb-auto p-0">
+                    <div class="display-cards">
+                        <div class="card-body">
+                            <?php
+                            $sql = "SELECT * FROM admins";
+                            $query = $conn->query($sql);
+                            ?>
+                            <h1 class="card-title"><?= $query->num_rows; ?></h1>
+                            <p class="card-text">Admins</p>
+                        </div>
+                        <i class="material-icons" id="logo-display">manage_accounts</i>
                     </div>
-                </div>
-                <div class="card border-success mb-3 p-0">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Primary card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card border-success mb-3 p-0">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Primary card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card border-success mb-3 p-0">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Primary card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card border-success mb-3 p-0">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Primary card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="card-footer text-center bg-light">
+                        <a href="#" class="text-dark" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
                     </div>
                 </div>
             </div>

@@ -17,7 +17,7 @@
         <hr>
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link active" id="sidebar-link" href="#"><i class="material-icons">dashboard</i> Dashboard</a>
+                <a class="nav-link active" id="sidebar-link" href="dashboard.php"><i class="material-icons">dashboard</i> Dashboard</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="sidebar-link" href="#"><i class="material-icons">account_circle</i> Users</a>
