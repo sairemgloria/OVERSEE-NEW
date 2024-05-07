@@ -7,13 +7,22 @@
         <div class="collapse navbar-collapse p-2" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-items m-1">
-                    <a class="nav-link active" href="#">Dashboard</a>
+                    <a class="nav-link active" href="dashboard.php">Dashboard</a>
                 </li>
                 <li class="nav-items m-1">
-                    <a class="nav-link" href="#">Users</a>
+                    <a class="nav-link active" href="#">Attendance</a>
                 </li>
                 <li class="nav-items m-1">
-                    <a class="nav-link" href="#">Settings</a>
+                    <a class="nav-link active" href="employee.php">Employee</a>
+                </li>
+                <li class="nav-items m-1">
+                    <a class="nav-link active" href="#">Department</a>
+                </li>
+                <li class="nav-items m-1">
+                    <a class="nav-link" href="#">Role</a>
+                </li>
+                <li class="nav-items m-1">
+                    <a class="nav-link" href="#">Admin</a>
                 </li>
                 <li class="nav-items m-1">
                     <a class="nav-link" href="#" role="switch" id="flexSwitchCheckChecked" checked onclick="myFunction()"> Switch</a>

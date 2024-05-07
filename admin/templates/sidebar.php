@@ -17,13 +17,22 @@
         <hr>
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link active" id="sidebar-link" href="dashboard.php"><i class="material-icons">dashboard</i> Dashboard</a>
+                <a class="nav-link" id="sidebar-link" href="dashboard.php"><i class="material-icons">dashboard</i> Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="sidebar-link" href="#"><i class="material-icons">account_circle</i> Users</a>
+                <a class="nav-link" id="sidebar-link" href="#"><i class="material-icons">calendar_month</i> Attendance</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="sidebar-link" href="#"><i class="material-icons">build</i> Settings</a>
+                <a class="nav-link" id="sidebar-link" href="employee.php"><i class="material-icons">groups</i> Employee</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="sidebar-link" href="#"><i class="material-icons">map</i> Department</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="sidebar-link" href="#"><i class="material-icons">build</i> Role</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="sidebar-link" href="#"><i class="material-icons">admin_panel_settings</i> Admin</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="sidebar-link" href="#" role="switch" id="flexSwitchCheckChecked" checked onclick="myFunction()">
