@@ -129,11 +129,12 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" name="SUBMIT" class="btn btn-primary">Save changes</button>
+        <button type="submit" id="submit" name="SUBMIT" class="btn btn-primary">Save changes</button>
         </form>
       </div>
     </div>
   </div>
 </div>
 
-<script src="../assets/js/employee_email_check_availability.js"></script>
+<!-- The script here below is to check valid email in the database -->
+<script src="assets/js/employee_email_check_availability.js"></script>

@@ -42,40 +42,29 @@ include("templates/sidebar.php");
             <table id="employeeTable" class="display table table-responsive">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
+                        <th style="text-align: center; vertical-align: middle;">#</th>
+                        <th style="text-align: center; vertical-align: middle;">Display Profile</th>
+                        <th style="text-align: center; vertical-align: middle;">Last Name</th>
+                        <th style="text-align: center; vertical-align: middle;">First Name</th>
+                        <th style="text-align: center; vertical-align: middle;">M.I</th>
+                        <th style="text-align: center; vertical-align: middle;">Gender</th>
+                        <th style="text-align: center; vertical-align: middle;">Role</th>
+                        <th style="text-align: center; vertical-align: middle;">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Tiger Nixon</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>61</td>
-                        <td>2011-04-25</td>
-                        <td>$320,800</td>
-                    </tr>
-                    <tr>
-                        <td>Donna Snider</td>
-                        <td>Customer Support</td>
-                        <td>New York</td>
-                        <td>27</td>
-                        <td>2011-01-25</td>
-                        <td>$112,000</td>
-                    </tr>
+                    <?php include("includes/display_all_employee.php"); ?>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
+                        <th style="text-align: center; vertical-align: middle;">#</th>
+                        <th style="text-align: center; vertical-align: middle;">Display Profile</th>
+                        <th style="text-align: center; vertical-align: middle;">Last Name</th>
+                        <th style="text-align: center; vertical-align: middle;">First Name</th>
+                        <th style="text-align: center; vertical-align: middle;">M.I</th>
+                        <th style="text-align: center; vertical-align: middle;">Gender</th>
+                        <th style="text-align: center; vertical-align: middle;">Role</th>
+                        <th style="text-align: center; vertical-align: middle;">Actions</th>
                     </tr>
                 </tfoot>
             </table>

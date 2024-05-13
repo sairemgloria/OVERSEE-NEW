@@ -14,29 +14,21 @@ function checkEmptyFieldsForAddEmployee($FNAME, $MI, $LNAME, $EMAIL, $PASSWORD, 
     }
 }
 
-function addEmployee($conn, $FNAME, $MI, $LNAME, $EMAIL, $PASSWORD, $CONTACT, $DATE_OF_BIRTH, $GENDER, $CIVIL_STATUS, $NATIONALITY, $DEPARTMENT, $ROLE, $OT, $TYPE, $EMP_KEY)
+function addEmployee($FNAME, $MI, $LNAME, $EMAIL, $PASSWORD, $CONTACT, $DATE_OF_BIRTH, $GENDER, $CIVIL_STATUS, $NATIONALITY, $DEPARTMENT, $ROLE, $OT, $TYPE, $EMP_KEY, $conn)
 {
+    $sql = "INSERT INTO employees (`FNAME`, `MI`, `LNAME`, `EMAIL`, `PASSWORD`, `CONTACT`, `DATE_OF_BIRTH`, `GENDER`, `CIVIL_STATUS`, `NATIONALITY`, `DEPARTMENT`, `ROLE`, `OT`, `TYPE`, `EMP_KEY`) VALUES ('$FNAME', '$MI', '$LNAME', '$EMAIL', '$PASSWORD', '$CONTACT', '$DATE_OF_BIRTH', '$GENDER', '$CIVIL_STATUS', '$NATIONALITY', '$DEPARTMENT', '$ROLE', '$OT', '$TYPE', '$EMP_KEY')";
 
-    $sql = "SELECT * FROM employees WHERE FNAME='$FNAME' AND MI='$MI' AND LNAME='$LNAME'";
-    $query = $conn->query($sql);
-
-    if ($query->num_rows > 0) {
-        $_SESSION["error"] = "Employee already exists";
+    if ($conn->query($sql)) {
+        $_SESSION["success"] = "Employee registration successfully";
+        header("Location: ../employee.php");
+        exit();
     } else {
-        $sql = "INSERT INTO employees (`FNAME`, `MI`, `LNAME`, `EMAIL`, `PASSWORD`, `CONTACT`, `DATE_OF_BIRTH`, `GENDER`, `CIVIL_STATUS`, `NATIONALITY`, `DEPARTMENT`, `ROLE`, `OT`, `TYPE`, `EMP_KEY`) VALUES ('$FNAME', '$MI', '$LNAME', '$EMAIL', '$PASSWORD', '$CONTACT', '$DATE_OF_BIRTH', '$GENDER', '$CIVIL_STATUS', '$NATIONALITY', '$DEPARTMENT', '$ROLE', '$OT', '$TYPE', '$EMP_KEY')";
-
-        if ($conn->query($sql)) {
-            $_SESSION["success"] = "Employee registration successfully";
-            header("Location: ../employee.php");
-            exit();
-        } else {
-            echo "Error: " . $conn->error;
-        }
-        $conn->close();
+        echo "Error: " . $conn->error;
     }
+    $conn->close();
 }
 
-if (isset($_POST["submit"])) {
+if (isset($_POST["SUBMIT"])) {
     $FNAME = $_POST["FNAME"];
     $MI = $_POST["MI"];
     $LNAME = $_POST["LNAME"];
@@ -69,9 +61,9 @@ if (isset($_POST["submit"])) {
         $EMP_KEY = 'OS' . date("Y") . '-' . generateRandomCode(8);
 
         // Check if the EMP_KEY already exists in the client table
-        $sql = "SELECT EMP_KEY FROM client WHERE EMP_KEY = '$EMP_KEY'";
+        $sql = "SELECT EMP_KEY FROM employees WHERE EMP_KEY = '$EMP_KEY'";
         $query = $conn->query($sql);
-    } while ($query->num_rows > 0); 
+    } while ($query->num_rows > 0);
 
     checkEmptyFieldsForAddEmployee($FNAME, $MI, $LNAME, $EMAIL, $PASSWORD, $CONTACT, $DATE_OF_BIRTH, $GENDER, $CIVIL_STATUS, $NATIONALITY, $DEPARTMENT, $ROLE);
     addEmployee($FNAME, $MI, $LNAME, $EMAIL, md5($PASSWORD), $CONTACT, $DATE_OF_BIRTH, $GENDER, $CIVIL_STATUS, $NATIONALITY, $DEPARTMENT, $ROLE, $OT, $TYPE, $EMP_KEY, $conn);

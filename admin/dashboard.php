@@ -44,7 +44,7 @@ include("templates/sidebar.php");
                     <div class="display-cards">
                         <div class="card-body">
                             <?php
-                            $sql = "SELECT * FROM employees";
+                            $sql = "SELECT * FROM employees WHERE GENDER='MALE'";
                             $query = $conn->query($sql);
                             ?>
                             <h1 class="card-title"><?= $query->num_rows; ?></h1>
@@ -60,7 +60,7 @@ include("templates/sidebar.php");
                     <div class="display-cards">
                         <div class="card-body">
                             <?php
-                            $sql = "SELECT * FROM employees";
+                            $sql = "SELECT * FROM employees WHERE GENDER='FEMALE'";
                             $query = $conn->query($sql);
                             ?>
                             <h1 class="card-title"><?= $query->num_rows; ?></h1>
