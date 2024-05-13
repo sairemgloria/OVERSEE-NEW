@@ -10,6 +10,7 @@
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                 <li><a class="dropdown-item" href="#">Edit Information</a></li>
                 <li><a class="dropdown-item" href="#">Update Profile</a></li>
+                <li><a class="dropdown-item" href="#" role="switch" id="flexSwitchCheckChecked" checked onclick="myFunction()"> Light / Dark Mode</a></li>
                 <li><a class="dropdown-item" href="includes/admin_logout.php">Sign Out</a></li>
             </ul>
         </div>
@@ -32,15 +33,7 @@
                 <a class="nav-link" id="sidebar-link" href="#"><i class="material-icons">build</i> Role</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="sidebar-link" href="#"><i class="material-icons">admin_panel_settings</i> Admin</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="sidebar-link" href="#" role="switch" id="flexSwitchCheckChecked" checked onclick="myFunction()">
-                    <i class="material-icons">brightness_4</i> Switch
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="sidebar-link" href="includes/admin_logout.php"><i class="material-icons">logout</i> Logout</a>
+                <a class="nav-link" id="sidebar-link" href="admin.php"><i class="material-icons">admin_panel_settings</i> Admin</a>
             </li>
         </ul>
     </div>

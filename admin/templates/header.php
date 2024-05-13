@@ -14,6 +14,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.css"> <!-- AJAX Tables -->
 
+    <!-- Sweetalert2 JS -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/sweetalert2.all.min.js"></script>
+
 </head>
 
 <body data-bs-theme="light">

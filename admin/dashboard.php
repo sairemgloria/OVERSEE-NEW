@@ -21,10 +21,8 @@ include("templates/sidebar.php");
             </div>
         </div>
         <!-- added breadcrumb features -->
-        <!-- <h1 class="dashboard my-4 fw-bold"><span class="dashboard-span fw-bold">|</span> Dashboard</h1> -->
         <hr class="hr-element">
         <div class="col-sm-12">
-            <!-- <div class="row gap-4 p-3 justify-content-evenly"> --> <!-- old code -->
             <div class="row gap-4 gap-md-3 gap-sm-5 p-3 justify-content-start">
                 <div class="card border-success mx-lg-3 p-0" id="cards">
                     <div class="display-cards">
@@ -39,7 +37,7 @@ include("templates/sidebar.php");
                         <i class="material-icons" id="logo-display">groups</i>
                     </div>
                     <div class="card-footer text-center bg-light">
-                        <a href="#" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
+                        <a href="employee.php" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
                     </div>
                 </div>
                 <div class="card border-success mx-lg-3 p-0" id="cards">
@@ -50,7 +48,7 @@ include("templates/sidebar.php");
                             $query = $conn->query($sql);
                             ?>
                             <h1 class="card-title"><?= $query->num_rows; ?></h1>
-                            <p class="card-text">Male</p>
+                            <p class="card-text">Male Employee</p>
                         </div>
                         <i class="material-icons" id="logo-display">man</i>
                     </div>
@@ -66,7 +64,7 @@ include("templates/sidebar.php");
                             $query = $conn->query($sql);
                             ?>
                             <h1 class="card-title"><?= $query->num_rows; ?></h1>
-                            <p class="card-text">Female</p>
+                            <p class="card-text">Female Employee</p>
                         </div>
                         <i class="material-icons" id="logo-display">woman</i>
                     </div>
@@ -135,11 +133,13 @@ include("templates/sidebar.php");
                         <i class="material-icons" id="logo-display">admin_panel_settings</i>
                     </div>
                     <div class="card-footer text-center bg-light">
-                        <a href="#" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
+                        <a href="admin.php" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
                     </div>
                 </div>
             </div>
         </div>
+
+        <hr class="hr-element">
 
         <p class="sample-text pt-4">This is a responsive Bootstrap 5 admin template. The sidebar transforms into a top navbar on smaller screens.</p>
         <p class="sample-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe consequatur, maxime ullam in veniam velit aspernatur esse tenetur voluptas odio temporibus dignissimos voluptatem iste similique minus dolore fugit beatae sapiente.

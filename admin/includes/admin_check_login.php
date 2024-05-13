@@ -24,7 +24,7 @@ function checkCredentialsAndRedirect($USERNAME, $PASSWORD, $conn) {
 
     if ($query->num_rows > 0) {
         $row = $query->fetch_assoc();
-        if ($PASSWORD === $row['PASSWORD']) {
+        if ($USERNAME === $row['USERNAME'] && $PASSWORD === $row['PASSWORD']) {
             $_SESSION['admin'] = $row['ID'];
             header("Location: ../dashboard.php");
             exit();

@@ -6,18 +6,9 @@
     <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
     <script src="assets/js/employee_tables.js"></script>
 
-    <!-- Custom script for sidebar/navbar toggle -->
-    <script>
-        document.getElementById('navbar-toggler').addEventListener('click', function() {
-            document.getElementById('sidebar').classList.toggle('active');
-        });
-
-        function myFunction() {
-            var element = document.body;
-            element.dataset.bsTheme =
-                element.dataset.bsTheme == "light" ? "dark" : "light";
-        }
-    </script>
+    <!-- JS Include Files -->
+    <script src="assets/js/switchmode.js"></script> <!-- Light Dark Switch JS -->
+    <script src="assets/js/sweetalert.js"></script> <!-- Sweetalert2 JS -->
 </body>
 
 </html>

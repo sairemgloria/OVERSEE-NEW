@@ -22,13 +22,22 @@
                     <a class="nav-link" href="#">Role</a>
                 </li>
                 <li class="nav-items m-1">
-                    <a class="nav-link" href="#">Admin</a>
+                    <a class="nav-link" href="admin.php">Admin</a>
                 </li>
                 <li class="nav-items m-1">
-                    <a class="nav-link" href="#" role="switch" id="flexSwitchCheckChecked" checked onclick="myFunction()"> Switch</a>
-                </li>
-                <li class="nav-items m-1">
-                    <a class="nav-link" href="includes/admin_logout.php">Logout</a>
+                    <!-- added toggle drop down button -->
+                    <div class="dropdown" id="">
+                        <a class="dropdown-toggle" href="#" id="dropdownMenu2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <?= $user['USERNAME']; ?> Profile
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><a class="dropdown-item" href="#">Edit Information</a></li>
+                            <li><a class="dropdown-item" href="#">Update Profile</a></li>
+                            <li><a class="dropdown-item" href="#" role="switch" id="flexSwitchCheckChecked" checked onclick="myFunction()">Light / Dark Mode</a></li>
+                            <li><a class="dropdown-item" href="includes/admin_logout.php">Sign Out</a></li>
+                        </ul>
+                    </div>
+                    <!-- added toggle drop down button -->
                 </li>
             </ul>
         </div>
