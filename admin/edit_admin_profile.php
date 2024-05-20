@@ -25,7 +25,7 @@ if (isset($_GET["q"])) {
             </div>
             <div class="col-sm-6" id="breadcrumb-align-center">
                 <ol class="breadcrumb float-sm-right my-0 my-md-3 my-lg-3">
-                    <li class="breadcrumb-item"><a href="dashboard.php" style="text-decoration: none;">Home</a></li>
+                    <li class="breadcrumb-item"><a href="admin.php" style="text-decoration: none;">Admin Records</a></li>
                     <li class="breadcrumb-item active">Edit Admin Profile</li>
                 </ol>
             </div>
@@ -79,7 +79,7 @@ if (isset($_GET["q"])) {
                                 <div class="form-group">
                                     <label for="role" class="control-label">Role</label>
                                     <select name="ROLE" class="form-control">
-                                        <option selected value="<?= $row['ROLE']; ?>"><?= $row['ROLE']; ?>(Current
+                                        <option selected value="<?= $row['ROLE']; ?>"><?= $row['ROLE']; ?> (Current
                                             selected)</option>
                                         <option value="SysAdmin"">System Administrator</option>
                                     </select>

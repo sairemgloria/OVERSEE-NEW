@@ -110,7 +110,7 @@
             <div class="col-sm-12 mb-3">
               <div class="form-group">
                 <label for="role" class="control-label">Role</label>
-                <select name="ROLE" class="form-control">
+                <select name="ROLE_NAME" class="form-control">
                   <option value="" disabled selected> Select role</option>
                   <?php include("selecting_role.php"); ?>
                 </select>

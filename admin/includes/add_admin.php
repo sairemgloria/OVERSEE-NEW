@@ -3,7 +3,7 @@
 include("session.php");
 
 function checkEmptyFieldsAndRedirectAddAdmin ($USERNAME, $PASSWORD, $NAME, $ROLE) {
-    if (empty($USERNAME) && empty($PASSWORD) && empty($NAME)) {
+    if (empty($USERNAME) && empty($PASSWORD) && empty($NAME) && empty($ROLE)) {
         $_SESSION["error"] = "Fields are empty. Please fill up the form.";
     } elseif (empty($USERNAME)) {
         $_SESSION["error"] = "Username is empty. Please fill up the field.";

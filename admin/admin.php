@@ -54,7 +54,7 @@ include("templates/sidebar.php");
                 <tfoot>
                     <tr>
                         <th style="text-align: center; vertical-align: middle;">#</th>
-                        <th style="text-align: center; vertical-align: middle;">Profile</th>
+                        <th style="text-align: center; vertical-align: middle;">Display Profile</th>
                         <th style="text-align: center; vertical-align: middle;">Name</th>
                         <th style="text-align: center; vertical-align: middle;">Role</th>
                         <th style="text-align: center; vertical-align: middle;">Actions</th>
