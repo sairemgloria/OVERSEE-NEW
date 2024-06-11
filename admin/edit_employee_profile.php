@@ -50,7 +50,7 @@ if (isset($_GET["q"])) {
                     <h5 class="card-header p-3"><i class="material-icons" id="material-icon">info</i>
                         <?= $emp_row["FNAME"] . " " . $emp_row["LNAME"]; ?> Profile</h5>
                     <div class="card-body align-items-center justify-content-center">
-                        <form class="form-horizontal" method="POST" action="./includes/update_admin_profile.php" autocomplete="off" onSubmit="return valid();" enctype="multipart/form-data">
+                        <form class="form-horizontal" method="POST" action="./includes/update_employee_profile.php" autocomplete="off" onSubmit="return valid();" enctype="multipart/form-data">
                             <input type="hidden" class="form-control" name="ID" value="<?= $emp_row['ID']; ?>">
                             <div class="col-sm-12 mb-3">
                                 <div class="form-group">

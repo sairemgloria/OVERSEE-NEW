@@ -4,7 +4,7 @@
         <hr>
         <!-- added toggle drop down button -->
         <div class="dropdown" id="sidebar-dropdown">
-            <img src="./assets/images/<?= empty($row["PROFILE"]) ? "default.jpg" : "../uploads/" . $row["PROFILE"]; ?>" width="30" height="30" alt="..." style="border-radius: 50%;">
+            <img src="./assets/images/<?= empty($user["PROFILE"]) ? "default.jpg" : "../uploads/" . $user["PROFILE"]; ?>" width="30" height="30" alt="..." style="border-radius: 50%;">
             <a class="dropdown-toggle" href="#" id="dropdownMenu2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Welcome <?= $user['USERNAME']; ?>
             </a>
