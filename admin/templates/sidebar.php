@@ -22,7 +22,7 @@
                 <a class="nav-link" id="sidebar-link" href="dashboard.php"><i class="material-icons">dashboard</i> Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="sidebar-link" href="#"><i class="material-icons">calendar_month</i> Attendance</a>
+                <a class="nav-link" id="sidebar-link" href="attendance.php"><i class="material-icons">calendar_month</i> Attendance</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="sidebar-link" href="employee.php"><i class="material-icons">groups</i> Employee</a>

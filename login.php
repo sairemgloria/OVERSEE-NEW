@@ -43,7 +43,7 @@ session_start(); // THIS CODE IS FOR THE LOGIN NOTIFICATION IF VALID USER OR NOT
               <input type="password" name="PASSWORD" class="form-control" placeholder="eg. ********">
             </div>
             <div class="container p-0 text-center text-lg-start">
-              <button type="submit" name="login" class="btn btn-teal btn-lg px-5 mb-4 mb-md-4 mb-lg-0">Log In</button>
+              <button type="submit" name="login" class="btn btn-teal btn-lg px-5 mb-4 mb-md-4 mb-lg-0">Sign In</button>
             </div>
           </form>
           <hr class="mt-5">

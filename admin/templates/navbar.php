@@ -10,7 +10,7 @@
                     <a class="nav-link active" href="dashboard.php">Dashboard</a>
                 </li>
                 <li class="nav-items m-1">
-                    <a class="nav-link active" href="#">Attendance</a>
+                    <a class="nav-link active" href="attendance.php">Attendance</a>
                 </li>
                 <li class="nav-items m-1">
                     <a class="nav-link active" href="employee.php">Employee</a>

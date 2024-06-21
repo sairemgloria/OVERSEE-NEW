@@ -5,6 +5,7 @@
     <!-- AJAX Tables -->
     <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
     <script src="assets/js/employee_tables.js"></script>
+    <script src="assets/js/attendance_tables.js"></script>
 
     <!-- JS Include Files -->
     <script src="assets/js/switchmode.js"></script> <!-- Light Dark Switch JS -->
