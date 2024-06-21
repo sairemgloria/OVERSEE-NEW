@@ -101,7 +101,7 @@ include("templates/sidebar.php");
                         <i class="material-icons" id="logo-display">map</i>
                     </div>
                     <div class="card-footer text-center bg-light">
-                        <a href="#" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
+                        <a href="department.php" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
                     </div>
                 </div>
                 <div class="card border-success mx-lg-3 p-0" id="cards">
@@ -117,7 +117,7 @@ include("templates/sidebar.php");
                         <i class="material-icons" id="logo-display">build</i>
                     </div>
                     <div class="card-footer text-center bg-light">
-                        <a href="#" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
+                        <a href="role.php" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
                     </div>
                 </div>
                 <div class="card border-success mx-lg-3 p-0" id="cards">

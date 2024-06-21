@@ -5,7 +5,7 @@ include("templates/navbar.php");
 include("templates/sidebar.php");
 
 if (isset($_GET["q"])) {
-    $sql = "SELECT * FROM admins WHERE ID='" . $_GET["q"] . "'";
+    $sql = "SELECT * FROM departments WHERE ID='" . $_GET["q"] . "'";
     $query = $conn->query($sql);
 
     if ($query->num_rows > 0) {
@@ -20,12 +20,12 @@ if (isset($_GET["q"])) {
         <!-- added breadcrumb features -->
         <div class="row">
             <div class="col-sm-6">
-                <h1 class="my-0 my-md-3 my-lg-3 fw-bold"><span class="dashboard-span fw-bold">|</span> View Profile</h1>
+                <h1 class="my-0 my-md-3 my-lg-3 fw-bold"><span class="dashboard-span fw-bold">|</span> View Department</h1>
             </div>
             <div class="col-sm-6" id="breadcrumb-align-center">
                 <ol class="breadcrumb float-sm-right my-0 my-md-3 my-lg-3">
-                    <li class="breadcrumb-item"><a href="admin.php" style="text-decoration: none;">Admin Records</a></li>
-                    <li class="breadcrumb-item active">View Profile</li>
+                    <li class="breadcrumb-item"><a href="department.php" style="text-decoration: none;">Department Records</a></li>
+                    <li class="breadcrumb-item active">View Department</li>
                 </ol>
             </div>
         </div>
@@ -34,7 +34,7 @@ if (isset($_GET["q"])) {
         <div class="table-responsive">
             <div class="col-md-12 pt-4">
                 <div class="card w-100">
-                    <h5 class="card-header p-3"><i class="material-icons" id="material-icon">info</i> <?= $row["NAME"]; ?>'s Profile</h5>
+                    <h5 class="card-header p-3"><i class="material-icons" id="material-icon">info</i> <?= $row["DEPARTMENT_NAME"]; ?>'s Profile</h5>
                     <div class="card-body d-flex align-items-center justify-content-center">
                     <table class="table table-bordered">
                         <tr>
@@ -42,25 +42,25 @@ if (isset($_GET["q"])) {
                             <td width="400"><?= $row["ID"]; ?></td>
                         </tr>
                         <tr>
-                            <td width="150">Display Profile</td>
-                            <td width="400"><img src="./assets/images/<?= empty($row["PROFILE"]) ? "default.jpg" : "../uploads/" . $row["PROFILE"]; ?>" width="50" height="50" alt="..."></td>
+                            <td width="150">Department Name</td>
+                            <td width="400"><?= $row["DEPARTMENT_NAME"]; ?></td>
                         </tr>
                         <tr>
-                            <td width="150">Username</td>
-                            <td width="400"><?= $row["USERNAME"]; ?></td>
+                            <td width="150">Time In</td>
+                            <td width="400"><?= $row["DEPARTMENT_TIME_IN"]; ?></td>
                         </tr>
                         <tr>
-                            <td width="150">Name</td>
-                            <td width="400"><?= $row["NAME"]; ?></td>
+                            <td width="150">Time Out</td>
+                            <td width="400"><?= $row["DEPARTMENT_TIME_OUT"]; ?></td>
                         </tr>
                         <tr>
-                            <td width="150">Role</td>
-                            <td width="400"><?= $row["ROLE"]; ?></td>
+                            <td width="150">Overtime</td>
+                            <td width="400"><?= $row["DEPARTMENT_OVERTIME"]; ?></td>
                         </tr>
                     </table>
                     </div>
                     <div class="card-footer p-3">
-                        <a href="admin.php"><button type="button" class="btn btn-secondary">Return</button></a>
+                        <a href="department.php"><button type="button" class="btn btn-secondary">Return</button></a>
                     </div>
                 </div>
             </div>

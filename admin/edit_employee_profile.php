@@ -20,13 +20,12 @@ if (isset($_GET["q"])) {
         <!-- added breadcrumb features -->
         <div class="row">
             <div class="col-sm-6">
-                <h1 class="my-0 my-md-3 my-lg-3 fw-bold"><span class="dashboard-span fw-bold">|</span> Edit Employee
-                    Profile</h1>
+                <h1 class="my-0 my-md-3 my-lg-3 fw-bold"><span class="dashboard-span fw-bold">|</span> Edit Employee</h1>
             </div>
             <div class="col-sm-6" id="breadcrumb-align-center">
                 <ol class="breadcrumb float-sm-right my-0 my-md-3 my-lg-3">
-                <li class="breadcrumb-item"><a href="employee.php" style="text-decoration: none;">Employee Records</a></li>
-                    <li class="breadcrumb-item active">Edit Employee Profile</li>
+                    <li class="breadcrumb-item"><a href="employee.php" style="text-decoration: none;">Employee Records</a></li>
+                    <li class="breadcrumb-item active">Edit Employee</li>
                 </ol>
             </div>
         </div>
@@ -35,15 +34,7 @@ if (isset($_GET["q"])) {
         <div class="table-responsive">
             <?php
             // THIS CODE BELOW DISPLAY THE ERROR MESSAGE OF FIELDS ARE NEEDED TO FILLED UP
-            if (isset($_SESSION["error"])) {
-                echo '<div class="alert alert-danger font-small" style="margin: 0;">' . $_SESSION["error"] . "</div>";
-                unset($_SESSION["error"]); // CLEAR THE ERROR MESSAGE AFTER DISPLAYING IT
-            }
-            // THIS CODE BELOW DISPLAY THE SUCCESS MESSAGE IF THERES NO FIELDS EMPTY AND SUCCESS REGISTERED
-            if (isset($_SESSION["success"])) {
-                echo '<div class="alert alert-success font-small" style="margin: 0;">' . $_SESSION["success"] . "</div>";
-                unset($_SESSION["success"]); // CLEAR THE ERROR MESSAGE AFTER DISPLAYING IT
-            }
+            include("includes/toast_notification.php");
             ?>
             <div class="col-md-12 pt-4">
                 <div class="card w-100">
@@ -101,7 +92,7 @@ if (isset($_GET["q"])) {
                                 <div class="form-group">
                                     <label for="department" class="control-label">Department</label>
                                     <select name="DEPARTMENT" class="form-control">
-                                        <option selected value="<?= $emp_row['DEPARTMENT']; ?>"><?= $emp_row['DEPARTMENT']; ?> (Current
+                                        <option disabled selected value="<?= $emp_row['DEPARTMENT']; ?>"><?= $emp_row['DEPARTMENT']; ?> (Current
                                             selected)</option>
                                         <?php include("includes/selecting_department.php"); ?>
                                     </select>
@@ -112,7 +103,7 @@ if (isset($_GET["q"])) {
                                 <div class="form-group">
                                     <label for="role" class="control-label">Role</label>
                                     <select class="form-control" name="ROLE">
-                                        <option selected value="<?= $emp_row['ROLE']; ?>"><?= $emp_row['ROLE']; ?> (Current
+                                        <option disabled selected value="<?= $emp_row['ROLE']; ?>"><?= $emp_row['ROLE']; ?> (Current
                                             selected)</option>
                                         <?php include("includes/selecting_role.php"); ?>
                                     </select>
@@ -137,7 +128,7 @@ if (isset($_GET["q"])) {
                                 <div class="form-group">
                                     <label for="gender" class="control-label">Gender</label>
                                     <select name="GENDER" class="form-control">
-                                        <option selected value="<?= $emp_row['GENDER']; ?>"><?= $emp_row['GENDER']; ?> (Current
+                                        <option disabled selected value="<?= $emp_row['GENDER']; ?>"><?= $emp_row['GENDER']; ?> (Current
                                             selected)</option>
                                         <option>Male</option>
                                         <option>Female</option>
@@ -149,7 +140,7 @@ if (isset($_GET["q"])) {
                                 <div class="form-group">
                                     <label for="civilstatus" class="control-label">Civil Status</label>
                                     <select name="CIVIL_STATUS" class="form-control">
-                                        <option selected value="<?= $emp_row['CIVIL_STATUS']; ?>"><?= $emp_row['CIVIL_STATUS']; ?> (Current
+                                        <option disabled selected value="<?= $emp_row['CIVIL_STATUS']; ?>"><?= $emp_row['CIVIL_STATUS']; ?> (Current
                                             selected)</option>
                                         <option>Single</option>
                                         <option>Married</option>
@@ -164,20 +155,18 @@ if (isset($_GET["q"])) {
                                 <div class="form-group">
                                     <label for="nationality" class="control-label">Nationality</label>
                                     <select class="form-control" name="NATIONALITY">
-                                        <option selected value="<?= $emp_row['NATIONALITY']; ?>"><?= $emp_row['NATIONALITY']; ?> (Current
+                                        <option disabled selected value="<?= $emp_row['NATIONALITY']; ?>"><?= $emp_row['NATIONALITY']; ?> (Current
                                             selected)</option>
                                         <?php include("includes/selecting_nationality.php"); ?>
                                     </select>
                                 </div>
                             </div>
-
-                            
                     </div>
                     <div class="card-footer p-3">
                         <a href="employee.php"><button type="button" class="btn btn-secondary">Return</button></a>
                         <button type="submit" id="submit" name="UPDATE" class="btn btn-success">Update</button>
-                        </form>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>

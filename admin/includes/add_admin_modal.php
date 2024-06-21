@@ -57,6 +57,7 @@
             <div class="col-sm-12 mb-3">
               <div class="form-group">
                 <label for="profile" class="control-label">Profile</label>
+                <!-- <input type="file" class="form-control" name="PROFILE" accept=".jpg, .jpeg, .png"> -->
                 <input type="file" class="form-control" name="PROFILE">
               </div>
             </div>
@@ -73,7 +74,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" name="SUBMIT" class="btn btn-primary">Save changes</button>
+        <button type="submit" name="SUBMIT" class="btn btn-primary">Register</button>
         </form>
       </div>
     </div>

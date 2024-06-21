@@ -11,7 +11,7 @@ function overtimeSwitch($ID, $conn)
     $sql = "UPDATE employees SET OT='$OT' WHERE ID='$ID'";
 
     if ($conn->query($sql)) {
-        $_SESSION["success"] = "Employee overtime updated successfully";
+        $_SESSION["success"] = "Employee overtime updated successful.";
         header("Location: ../view_employee_profile.php?q=$ID");
         exit();
     } else {

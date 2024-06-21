@@ -873,7 +873,7 @@ $countries[] = array(
 
 $countries[] = array(
   "en_short_name" => "Philippines",
-  "nationality" => "Philippine, Filipino",
+  "nationality" => "Philippines, Filipino",
   );
 
 $countries[] = array(

@@ -33,7 +33,7 @@ function updateEmployeeDisplayProfile($ID, $conn) {
                 $sql = "UPDATE employees SET $updateDisplay WHERE ID='$ID'";
 
                 if ($conn->query($sql) === TRUE) {
-                    $_SESSION["success"] = "Employee display profile updated successfully";
+                    $_SESSION["success"] = "Employee display profile updated successful.";
                     header("Location: ../view_employee_profile.php?q=$ID");
                     exit();
                 } else {

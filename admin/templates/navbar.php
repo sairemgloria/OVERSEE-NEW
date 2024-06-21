@@ -16,10 +16,10 @@
                     <a class="nav-link active" href="employee.php">Employee</a>
                 </li>
                 <li class="nav-items m-1">
-                    <a class="nav-link active" href="#">Department</a>
+                    <a class="nav-link active" href="department.php">Department</a>
                 </li>
                 <li class="nav-items m-1">
-                    <a class="nav-link" href="#">Role</a>
+                    <a class="nav-link" href="role.php">Role</a>
                 </li>
                 <li class="nav-items m-1">
                     <a class="nav-link" href="admin.php">Admin</a>

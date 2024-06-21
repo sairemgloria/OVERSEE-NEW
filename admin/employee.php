@@ -25,19 +25,11 @@ include("templates/sidebar.php");
         <div class="table-responsive">
             <?php
             // THIS CODE BELOW DISPLAY THE ERROR MESSAGE OF FIELDS ARE NEEDED TO FILLED UP
-            if (isset($_SESSION["error"])) {
-                echo '<div class="alert alert-danger font-small" style="margin: 0;">' . $_SESSION["error"] . "</div>";
-                unset($_SESSION["error"]); // CLEAR THE ERROR MESSAGE AFTER DISPLAYING IT
-            }
-            // THIS CODE BELOW DISPLAY THE SUCCESS MESSAGE IF THERES NO FIELDS EMPTY AND SUCCESS REGISTERED
-            if (isset($_SESSION["success"])) {
-                echo '<div class="alert alert-success font-small" style="margin: 0;">' . $_SESSION["success"] . "</div>";
-                unset($_SESSION["success"]); // CLEAR THE ERROR MESSAGE AFTER DISPLAYING IT
-            }
+            include("includes/toast_notification.php");
             ?>
             <div class="btn-group my-3">
                 <a href="#addEmployee" data-bs-toggle="modal" data-bs-target="#myModal" class="btn bg-success btn-sm text-light" id="add-btn"><i class="material-icons" id="material-icon">person_add_alt</i> &nbsp;REGISTER</a>
-                <a href="#exportEmployee" data-bs-toggle="modal" class="btn bg-primary btn-sm text-light" id="export-btn"><i class="material-icons" id="material-icon">file_download</i> &nbsp;EXPORT FILE</a>
+                <a href="#exportEmployee" data-bs-toggle="modal" class="btn bg-primary btn-sm text-light" id="export-btn"><i class="material-icons" id="material-icon">file_download</i> &nbsp;EXPORT</a>
             </div>
             <table id="employeeTable" class="display table table-responsive">
                 <thead>

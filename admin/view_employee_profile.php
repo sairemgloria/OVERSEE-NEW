@@ -20,12 +20,12 @@ if (isset($_GET["q"])) {
         <!-- added breadcrumb features -->
         <div class="row">
             <div class="col-sm-6">
-                <h1 class="my-0 my-md-3 my-lg-3 fw-bold"><span class="dashboard-span fw-bold">|</span> View Employee Profile</h1>
+                <h1 class="my-0 my-md-3 my-lg-3 fw-bold"><span class="dashboard-span fw-bold">|</span> View Profile</h1>
             </div>
             <div class="col-sm-6" id="breadcrumb-align-center">
                 <ol class="breadcrumb float-sm-right my-0 my-md-3 my-lg-3">
                     <li class="breadcrumb-item"><a href="employee.php" style="text-decoration: none;">Employee Records</a></li>
-                    <li class="breadcrumb-item active">View Employee Profile</li>
+                    <li class="breadcrumb-item active">View Profile</li>
                 </ol>
             </div>
         </div>

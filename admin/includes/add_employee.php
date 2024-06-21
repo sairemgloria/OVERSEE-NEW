@@ -5,9 +5,33 @@ include("session.php");
 function checkEmptyFieldsForAddEmployee($FNAME, $MI, $LNAME, $EMAIL, $PASSWORD, $CONTACT, $DATE_OF_BIRTH, $GENDER, $CIVIL_STATUS, $NATIONALITY, $DEPARTMENT, $ROLE)
 {
     if (empty($FNAME) && empty($MI) && empty($LNAME) && empty($EMAIL) && empty($PASSWORD) && empty($CONTACT) && empty($DATE_OF_BIRTH) && empty($GENDER) && empty($CIVIL_STATUS) && empty($NATIONALITY) && empty($DEPARTMENT) && empty($ROLE)) {
-        $_SESSION["error"] = "Fields are require to fill up";
+        $_SESSION["error"] = "Fields are empty. Kindly fill the form.";
+    } elseif (empty($FNAME)) {
+        $_SESSION["error"] = "First name is empty";
+    } elseif (empty($MI)) {
+        $_SESSION["error"] = "Middle name is empty";
+    } elseif (empty($LNAME)) {
+        $_SESSION["error"] = "Last name is empty";
+    } elseif (empty($EMAIL)) {
+        $_SESSION["error"] = "Email is empty";
+    } elseif (empty($PASSWORD)) {
+        $_SESSION["error"] = "Password is empty";
+    } elseif (empty($CONTACT)) {
+        $_SESSION["error"] = "Contact is empty";
+    } elseif (empty($DATE_OF_BIRTH)) {
+        $_SESSION["error"] = "Date of birth is empty";
+    } elseif (empty($GENDER)) {
+        $_SESSION["error"] = "Gender is empty";
+    } elseif (empty($CIVIL_STATUS)) {
+        $_SESSION["error"] = "Civil status is empty";
+    } elseif (empty($NATIONALITY)) {
+        $_SESSION["error"] = "Nationality is empty";
+    } elseif (empty($DEPARTMENT)) {
+        $_SESSION["error"] = "Department is empty";
+    } elseif (empty($ROLE)) {
+        $_SESSION["error"] = "Role is empty";
     }
-
+    
     if (isset($_SESSION["error"])) {
         header("Location: ../employee.php");
         exit();
@@ -19,7 +43,7 @@ function addEmployee($FNAME, $MI, $LNAME, $EMAIL, $PASSWORD, $CONTACT, $DATE_OF_
     $sql = "INSERT INTO employees (`FNAME`, `MI`, `LNAME`, `EMAIL`, `PASSWORD`, `CONTACT`, `DATE_OF_BIRTH`, `GENDER`, `CIVIL_STATUS`, `NATIONALITY`, `DEPARTMENT`, `ROLE`, `OT`, `TYPE`, `EMP_KEY`) VALUES ('$FNAME', '$MI', '$LNAME', '$EMAIL', '$PASSWORD', '$CONTACT', '$DATE_OF_BIRTH', '$GENDER', '$CIVIL_STATUS', '$NATIONALITY', '$DEPARTMENT', '$ROLE', '$OT', '$TYPE', '$EMP_KEY')";
 
     if ($conn->query($sql)) {
-        $_SESSION["success"] = "Employee registration successfully";
+        $_SESSION["success"] = "Employee registration successful.";
         header("Location: ../employee.php");
         exit();
     } else {
@@ -40,7 +64,7 @@ if (isset($_POST["SUBMIT"])) {
     $CIVIL_STATUS = $_POST["CIVIL_STATUS"];
     $NATIONALITY = $_POST["NATIONALITY"];
     $DEPARTMENT = $_POST["DEPARTMENT"];
-    $ROLE = $_POST["ROLE"];
+    $ROLE = $_POST["ROLE_NAME"];
     $OT = "Deactivated";
     $TYPE = "User";
 

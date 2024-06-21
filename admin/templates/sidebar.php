@@ -28,10 +28,10 @@
                 <a class="nav-link" id="sidebar-link" href="employee.php"><i class="material-icons">groups</i> Employee</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="sidebar-link" href="#"><i class="material-icons">map</i> Department</a>
+                <a class="nav-link" id="sidebar-link" href="department.php"><i class="material-icons">map</i> Department</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="sidebar-link" href="#"><i class="material-icons">build</i> Role</a>
+                <a class="nav-link" id="sidebar-link" href="role.php"><i class="material-icons">build</i> Role</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="sidebar-link" href="admin.php"><i class="material-icons">admin_panel_settings</i> Admin</a>
