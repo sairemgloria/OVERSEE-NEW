@@ -33,11 +33,11 @@ session_start(); // THIS CODE IS FOR THE LOGIN NOTIFICATION IF VALID USER OR NOT
           <form action="includes/admin_check_login.php" method="POST" autocomplete="off">
             <div class="mb-3">
               <label class="form-label">Username</label>
-              <input type="text" name="USERNAME" class="form-control" placeholder="eg. admin">
+              <input type="text" name="USERNAME" class="form-control" placeholder="admin">
             </div>
             <div class="mb-5">
               <label class="form-label">Password</label>
-              <input type="password" name="PASSWORD" class="form-control" placeholder="eg. ********">
+              <input type="password" name="PASSWORD" class="form-control" placeholder="********">
             </div>
             <div class="container p-0 text-center text-lg-start">
               <button type="submit" name="login" class="btn btn-teal btn-lg px-5 mb-4 mb-md-4 mb-lg-0">Sign In</button>

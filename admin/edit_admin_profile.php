@@ -70,7 +70,7 @@ if (isset($_GET["q"])) {
                                 <div class="form-group">
                                     <label for="role" class="control-label">Role</label>
                                     <select name="ROLE" class="form-control">
-                                        <option disabled selected value="<?= $row['ROLE']; ?>"><?= $row['ROLE']; ?> (Current
+                                        <option selected value="<?= $row['ROLE']; ?>"><?= $row['ROLE']; ?> (Current
                                             selected)</option>
                                         <option value="SysAdmin"">System Administrator</option>
                                     </select>

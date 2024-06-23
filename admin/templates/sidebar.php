@@ -1,6 +1,6 @@
     <!-- Sidebar -->
     <div class="container-fluid p-0" id="sidebar">
-        <h3 class="adminpanel"><img src="../assets/images/logo.png" alt="logo" class="img-circle">&nbsp;OverSEE</h3>
+        <h3 class="adminpanel"><img src="./assets/images/logo.png" alt="logo" class="img-circle">&nbsp;OverSEE</h3>
         <hr>
         <!-- added toggle drop down button -->
         <div class="dropdown" id="sidebar-dropdown">
