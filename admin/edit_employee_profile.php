@@ -92,7 +92,7 @@ if (isset($_GET["q"])) {
                                 <div class="form-group">
                                     <label for="department" class="control-label">Department</label>
                                     <select name="DEPARTMENT" class="form-control">
-                                        <option disabled selected value="<?= $emp_row['DEPARTMENT']; ?>"><?= $emp_row['DEPARTMENT']; ?> (Current
+                                        <option selected value="<?= $emp_row['DEPARTMENT']; ?>"><?= $emp_row['DEPARTMENT']; ?> (Current
                                             selected)</option>
                                         <?php include("includes/selecting_department.php"); ?>
                                     </select>
@@ -103,7 +103,7 @@ if (isset($_GET["q"])) {
                                 <div class="form-group">
                                     <label for="role" class="control-label">Role</label>
                                     <select class="form-control" name="ROLE">
-                                        <option disabled selected value="<?= $emp_row['ROLE']; ?>"><?= $emp_row['ROLE']; ?> (Current
+                                        <option selected value="<?= $emp_row['ROLE']; ?>"><?= $emp_row['ROLE']; ?> (Current
                                             selected)</option>
                                         <?php include("includes/selecting_role.php"); ?>
                                     </select>
@@ -128,7 +128,7 @@ if (isset($_GET["q"])) {
                                 <div class="form-group">
                                     <label for="gender" class="control-label">Gender</label>
                                     <select name="GENDER" class="form-control">
-                                        <option disabled selected value="<?= $emp_row['GENDER']; ?>"><?= $emp_row['GENDER']; ?> (Current
+                                        <option selected value="<?= $emp_row['GENDER']; ?>"><?= $emp_row['GENDER']; ?> (Current
                                             selected)</option>
                                         <option>Male</option>
                                         <option>Female</option>
@@ -140,7 +140,7 @@ if (isset($_GET["q"])) {
                                 <div class="form-group">
                                     <label for="civilstatus" class="control-label">Civil Status</label>
                                     <select name="CIVIL_STATUS" class="form-control">
-                                        <option disabled selected value="<?= $emp_row['CIVIL_STATUS']; ?>"><?= $emp_row['CIVIL_STATUS']; ?> (Current
+                                        <option selected value="<?= $emp_row['CIVIL_STATUS']; ?>"><?= $emp_row['CIVIL_STATUS']; ?> (Current
                                             selected)</option>
                                         <option>Single</option>
                                         <option>Married</option>
@@ -155,7 +155,7 @@ if (isset($_GET["q"])) {
                                 <div class="form-group">
                                     <label for="nationality" class="control-label">Nationality</label>
                                     <select class="form-control" name="NATIONALITY">
-                                        <option disabled selected value="<?= $emp_row['NATIONALITY']; ?>"><?= $emp_row['NATIONALITY']; ?> (Current
+                                        <option selected value="<?= $emp_row['NATIONALITY']; ?>"><?= $emp_row['NATIONALITY']; ?> (Current
                                             selected)</option>
                                         <?php include("includes/selecting_nationality.php"); ?>
                                     </select>

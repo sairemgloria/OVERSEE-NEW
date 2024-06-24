@@ -19,9 +19,10 @@ function checkEmptyFieldsForEmployeeUpdateDisplayProfile($ID, $PROFILE) {
 
 function updateEmployeeDisplayProfile($ID, $conn) {
     $uploadImageDestination = "../assets/uploads/";
+    $maxFileSize = 5 * 1024 * 1024; // 5MB IN BYTES
 
     if (isset($_POST["UPDATE"])) {
-        if ($_FILES["PROFILE"]["size"] > 0) {
+        if ($_FILES["PROFILE"]["size"] <= $maxFileSize) {
             $display_tmp_name = $_FILES["PROFILE"]["tmp_name"];
             $display_filename = basename($_FILES["PROFILE"]["name"]);
             $target_file = $uploadImageDestination . $display_filename;
@@ -42,6 +43,10 @@ function updateEmployeeDisplayProfile($ID, $conn) {
             } else {
                 echo "Failed to move uploaded file.";
             }
+        } else {
+            $_SESSION["error"] = "File size exceeds the maximum limit of 5MB.";
+            header("Location: ../edit_employee_profile.php?q=$ID");
+            exit();
         }
     }
     $conn->close();
