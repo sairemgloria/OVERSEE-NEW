@@ -10,6 +10,7 @@
     <!-- JS Include Files -->
     <script src="assets/js/switchmode.js"></script> <!-- Light Dark Switch JS -->
     <script src="assets/js/sweetalert.js"></script> <!-- Sweetalert2 JS -->
+    <script src="assets/js/toast_notification.js"></script> <!-- Toast Notifications JS -->
     <script src="assets/js/overtime_switch.js"></script> <!-- Switch for Overtime Radio Button -->
 </body>
 

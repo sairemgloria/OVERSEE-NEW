@@ -5,11 +5,19 @@ include("templates/navbar.php");
 include("templates/sidebar.php");
 
 if (isset($_GET["q"])) {
-    $sql = "SELECT * FROM employees WHERE ID='" . $_GET["q"] . "'";
+    $employeeId = $conn->real_escape_string($_GET['q']);
+    $sql = "SELECT employees.*, attendance.EMP_NAME, attendance.AMLOGIN, attendance.AMLOGIN_STATUS, attendance.PMLOGOUT, attendance.PMLOGOUT_STATUS, CURRENTDATE, STATUS 
+            FROM employees 
+            INNER JOIN attendance ON attendance.EMP_NAME = CONCAT(employees.FNAME, ' ', employees.MI, ' ', employees.LNAME) 
+            WHERE employees.ID = '$employeeId'";
     $query = $conn->query($sql);
 
-    if ($query->num_rows > 0) {
+    if ($query && $query->num_rows > 0) {
         $row = $query->fetch_assoc();
+    } else {
+        // Handle the case where no matching records are found or query fails
+        $row = null;
+        echo "No records found or query failed.";
     }
 }
 ?>
@@ -41,8 +49,10 @@ if (isset($_GET["q"])) {
                     <h5 class="card-header p-3"><i class="material-icons" id="material-icon">info</i> <?= $row["FNAME"] . " " . $row["LNAME"]; ?>'s Attendance</h5>
                     <div class="card-body align-items-center justify-content-center">
                         <div class="btn-group my-3">
-                            <a href="#addEmployee" data-bs-toggle="modal" data-bs-target="#myModal" class="btn bg-primary btn-sm text-light" id="add-btn"><i class="material-icons" id="material-icon">file_download</i> &nbsp;EXPORT</a>
-                            <a href="#exportEmployee" data-bs-toggle="modal" class="btn bg-danger btn-sm text-light" id="export-btn"><i class="material-icons" id="material-icon">delete</i> &nbsp;CLEAR</a>
+                            <?php if ($row) : ?>
+                                <a href="./includes/export_excelfile_attendance.php?export=<?= $row['ID']; ?>" class="btn bg-primary btn-sm text-light" id="add-btn"><i class="material-icons" id="material-icon">file_download</i> &nbsp;EXPORT</a>
+                                <a href="./includes/clear_attendance.php?q=<?= $row['ID']; ?>" class="btn bg-danger btn-sm text-light" id="export-btn" onClick="return confirm('Are you sure you want to clear the attendance of this employee?');"><i class="material-icons" id="material-icon">delete</i> &nbsp;CLEAR</a>
+                            <?php endif; ?>
                         </div>
                         <table id="attendanceTable" class="display table table-responsive">
                             <thead>

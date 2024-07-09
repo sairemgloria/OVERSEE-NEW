@@ -27,7 +27,7 @@ session_start(); // THIS CODE IS FOR THE LOGIN NOTIFICATION IF VALID USER OR NOT
           <h2><span class="dashboard-span fw-bold">|</span> Admin <span>Portal</span></h2>
           <h5 class="oversee-h5">Sign in to proceed Administrator Dashboard</h5>
           <?php if (isset($_SESSION["error"])) {
-            echo '<div class="alert alert-danger font-small mb-4">' . $_SESSION["error"] . '</div>';
+            echo '<div class="alert alert-danger font-small mb-4" id="toastError">' . $_SESSION["error"] . '</div>';
             unset($_SESSION["error"]); // CLEAR THE ERROR MESSAGE AFTER DISPLAYING IT
           } ?>
           <form action="includes/admin_check_login.php" method="POST" autocomplete="off">
@@ -64,6 +64,7 @@ session_start(); // THIS CODE IS FOR THE LOGIN NOTIFICATION IF VALID USER OR NOT
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
   </script>
+  <script src="./assets/js/toast_notification.js"></script> <!-- Toast Notifications JS -->
 
 </body>
 
