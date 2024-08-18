@@ -25,7 +25,7 @@ if (!$query) {
                 <div class="btn-group btn-group-sm p-2">
                     <a href="view_employee_profile.php?q=<?= $row['ID']; ?>" class="btn btn-success"><i class="material-icons" id="material-icon">visibility</i></a>
                     <a href="edit_employee_profile.php?q=<?= $row['ID']; ?>" class="btn btn-primary"><i class="material-icons" id="material-icon">edit</i></a>
-                    <a href="./includes/delete_employee_profile.php?q=<?= $row['ID']; ?>" onclick="confirmDeleteEmployee(event, <?= $row['ID']; ?>);" class="btn btn-danger"><i class="material-icons" id="material-icon">delete</i></a>
+                    <a href="#" onclick="confirmDeleteEmployee(event, <?= $row['ID']; ?>);" class="btn btn-danger"><i class="material-icons" id="material-icon">delete</i></a>
                 </div>
             </td>
         </tr>

@@ -8,6 +8,28 @@ include("templates/sidebar.php");
 <!-- Page Content -->
 <div id="content">
     <div class="container-fluid">
+        <?php
+        # Use this code for debugging :)
+        # This is used only for displaying the arrays of $database.
+        echo 'Database Information :';
+        echo '<pre>';
+        print_r($database);
+        echo '</pre>';
+
+        # Use this code for debugging :)
+        # This is used only for displaying the arrays of $user.
+        echo 'User Information :';
+        echo '<pre>';
+        print_r($user);
+        echo '</pre>';
+
+        # Use this code for debugging :)
+        # This is used only for displaying the arrays of $_SESSION.
+        echo 'Session Information :';
+        echo '<pre>';
+        print_r($_SESSION);
+        echo '</pre>';
+        ?>
         <!-- added breadcrumb features -->
         <div class="row">
             <div class="col-sm-6">

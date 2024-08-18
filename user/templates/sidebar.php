@@ -22,7 +22,7 @@
                 <a class="nav-link" id="sidebar-link" href="user_dashboard.php"><i class="material-icons">account_box</i> My Profile</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="sidebar-link" href="#"><i class="material-icons">calendar_month</i> Attendance</a>
+                <a class="nav-link" id="sidebar-link" href="myattendance.php"><i class="material-icons">calendar_month</i> Attendance</a>
             </li>
         </ul>
     </div>

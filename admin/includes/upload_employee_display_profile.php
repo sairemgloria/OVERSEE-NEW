@@ -45,7 +45,7 @@ function updateEmployeeDisplayProfile($ID, $conn) {
             }
         } else {
             $_SESSION["error"] = "File size exceeds the maximum limit of 5MB.";
-            header("Location: ../edit_employee_profile.php?q=$ID");
+            header("Location: ../view_employee_profile.php?q=$ID");
             exit();
         }
     }

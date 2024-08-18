@@ -10,10 +10,10 @@
                     <a class="nav-link active" href="user_dashboard.php">Dashboard</a>
                 </li>
                 <li class="nav-items m-1">
-                    <a class="nav-link active" href="#">Profile</a>
+                    <a class="nav-link active" href="user_dashboard.php">Profile</a>
                 </li>
                 <li class="nav-items m-1">
-                    <a class="nav-link active" href="#">My Attendance</a>
+                    <a class="nav-link active" href="myattendance.php">My Attendance</a>
                 </li>
                 <li class="nav-items m-1">
                     <!-- added toggle drop down button -->

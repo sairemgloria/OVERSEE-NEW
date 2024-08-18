@@ -93,80 +93,82 @@ if (isset($_GET["q"])) {
                     <div class="col-lg-9 pt-4">
                         <div class="card w-100">
                             <h5 class="card-header p-3"><i class="material-icons" id="material-icon">info</i> <?= $row["FNAME"] . " " . $row["LNAME"]; ?>'s Profile</h5>
-                            <div class="card-body d-flex align-items-center justify-content-center">
-                                <table class="table table-bordered">
-                                    <tr>
-                                        <td width="150">Employee ID</td>
-                                        <td width="400"><?= $row["ID"]; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="150">Display Profile</td>
-                                        <td width="400"><img src="./assets/images/<?= empty($row["PROFILE"]) ? "default.jpg" : "../uploads/" . $row["PROFILE"]; ?>" width="50" height="50" alt="..."></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="150">Name</td>
-                                        <td width="400"><?= $row["FNAME"] . " " . $row["MI"] . " " . $row["LNAME"]; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="150">Email</td>
-                                        <td width="400"><?= $row["EMAIL"]; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="150">Contact</td>
-                                        <td width="400"><?= $row["CONTACT"]; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="150">Date of Birth</td>
-                                        <td width="400"><?= $row["DATE_OF_BIRTH"]; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="150">Gender</td>
-                                        <td width="400"><?= $row["GENDER"]; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="150">Civil Status</td>
-                                        <td width="400"><?= $row["CIVIL_STATUS"]; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="150">Nationality</td>
-                                        <td width="400"><?= $row["NATIONALITY"]; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="150">Department</td>
-                                        <td width="400"><?= $row["DEPARTMENT"]; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="150">Role</td>
-                                        <td width="400"><?= $row["ROLE"]; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="150">Account Type</td>
-                                        <td width="400"><?= $row["TYPE"]; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="150">Total Worked Hours</td>
-                                        <td width="400">Empty</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="150">Overtime</td>
-                                        <td width="400">
-                                            <?php
-                                            $isActivated = ($row["OT"] === "Activated");
-                                            $fontColor = ($isActivated) ? "green" : "gray";
-                                            ?>
-                                            <form action="includes/update_employee_overtime.php" method="POST" enctype="multipart/form-data" id="OT_FORM">
-                                                <!-- Add the ID input field -->
-                                                <input type="hidden" name="ID" value="<?= $row["ID"]; ?>">
-                                                <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" id="OT_SWITCH" name="SWITCH" <?= $isActivated ? "checked" : "" ?>>
-                                                    <label class="form-check-label" style="color: <?= $fontColor; ?>">
-                                                        <?= $row["OT"]; ?>
-                                                    </label>
-                                                </div>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                </table>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <td width="150">Employee ID</td>
+                                            <td width="400"><?= $row["ID"]; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="150">Display Profile</td>
+                                            <td width="400"><img src="./assets/images/<?= empty($row["PROFILE"]) ? "default.jpg" : "../uploads/" . $row["PROFILE"]; ?>" width="50" height="50" alt="..."></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="150">Name</td>
+                                            <td width="400"><?= $row["FNAME"] . " " . $row["MI"] . " " . $row["LNAME"]; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="150">Email</td>
+                                            <td width="400"><?= $row["EMAIL"]; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="150">Contact</td>
+                                            <td width="400"><?= $row["CONTACT"]; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="150">Date of Birth</td>
+                                            <td width="400"><?= $row["DATE_OF_BIRTH"]; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="150">Gender</td>
+                                            <td width="400"><?= $row["GENDER"]; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="150">Civil Status</td>
+                                            <td width="400"><?= $row["CIVIL_STATUS"]; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="150">Nationality</td>
+                                            <td width="400"><?= $row["NATIONALITY"]; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="150">Department</td>
+                                            <td width="400"><?= $row["DEPARTMENT"]; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="150">Role</td>
+                                            <td width="400"><?= $row["ROLE"]; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="150">Account Type</td>
+                                            <td width="400"><?= $row["TYPE"]; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="150">Total Worked Hours</td>
+                                            <td width="400">Empty</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="150">Overtime</td>
+                                            <td width="400">
+                                                <?php
+                                                $isActivated = ($row["OT"] === "Activated");
+                                                $fontColor = ($isActivated) ? "green" : "gray";
+                                                ?>
+                                                <form action="includes/update_employee_overtime.php" method="POST" enctype="multipart/form-data" id="OT_FORM">
+                                                    <!-- Add the ID input field -->
+                                                    <input type="hidden" name="ID" value="<?= $row["ID"]; ?>">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="OT_SWITCH" name="SWITCH" <?= $isActivated ? "checked" : "" ?>>
+                                                        <label class="form-check-label" style="color: <?= $fontColor; ?>">
+                                                            <?= $row["OT"]; ?>
+                                                        </label>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </div>
                             <div class="card-footer p-3">
                                 <a href="employee.php"><button type="button" class="btn btn-secondary">Return</button></a>
@@ -179,7 +181,7 @@ if (isset($_GET["q"])) {
     </div>
 </div>
 
-<?php 
+<?php
 include("includes/update_employee_display_profile.php");
 include("templates/footer.php");
 ?>
