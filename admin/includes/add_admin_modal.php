@@ -39,6 +39,7 @@
                 <select name="ROLE" class="form-control">
                   <option value="" disabled selected>Select role</option>
                   <option value="SysAdmin"">System Administrator</option>
+                  <?php include("selecting_department.php"); ?>
                 </select>
               </div>
             </div>

@@ -49,10 +49,17 @@ include("templates/sidebar.php");
                 <div class="card border-success mx-lg-3 p-0" id="cards">
                     <div class="display-cards">
                         <div class="card-body">
-                            <?php
-                            $sql = "SELECT * FROM employees";
-                            $query = $conn->query($sql);
-                            ?>
+                            <?php if ($user['ROLE'] != 'SysAdmin') : ?>
+                                <?php
+                                $sql = "SELECT * FROM employees WHERE DEPARTMENT = '{$user['ROLE']}'";
+                                $query = $conn->query($sql);
+                                ?>
+                            <?php else : ?>
+                                <?php
+                                $sql = "SELECT * FROM employees";
+                                $query = $conn->query($sql);
+                                ?>
+                            <?php endif; ?>
                             <h1 class="card-title"><?= $query->num_rows; ?></h1>
                             <p class="card-text">Employee</p>
                         </div>
@@ -65,42 +72,67 @@ include("templates/sidebar.php");
                 <div class="card border-success mx-lg-3 p-0" id="cards">
                     <div class="display-cards">
                         <div class="card-body">
-                            <?php
-                            $sql = "SELECT * FROM employees WHERE GENDER='MALE'";
-                            $query = $conn->query($sql);
-                            ?>
+                            <?php if ($user['ROLE'] != 'SysAdmin') : ?>
+                                <?php
+                                $sql = "SELECT * FROM employees WHERE GENDER = 'MALE' AND DEPARTMENT = '{$user['ROLE']}'";
+                                $query = $conn->query($sql);
+                                ?>
+                            <?php else : ?>
+                                <?php
+                                $sql = "SELECT * FROM employees WHERE GENDER='MALE'";
+                                $query = $conn->query($sql);
+                                ?>
+                            <?php endif; ?>
                             <h1 class="card-title"><?= $query->num_rows; ?></h1>
                             <p class="card-text">Male Employee</p>
                         </div>
                         <i class="material-icons" id="logo-display">man</i>
                     </div>
                     <div class="card-footer text-center bg-light">
-                        <a href="#" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
+                        <a href="male_employee.php" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
                     </div>
                 </div>
                 <div class="card border-success mx-lg-3 p-0" id="cards">
                     <div class="display-cards">
                         <div class="card-body">
-                            <?php
-                            $sql = "SELECT * FROM employees WHERE GENDER='FEMALE'";
-                            $query = $conn->query($sql);
-                            ?>
+                            <?php if ($user['ROLE'] != 'SysAdmin') : ?>
+                                <?php
+                                $sql = "SELECT * FROM employees WHERE GENDER = 'FEMALE' AND DEPARTMENT = '{$user['ROLE']}'";
+                                $query = $conn->query($sql);
+                                ?>
+                            <?php else : ?>
+                                <?php
+                                $sql = "SELECT * FROM employees WHERE GENDER='FEMALE'";
+                                $query = $conn->query($sql);
+                                ?>
+                            <?php endif; ?>
                             <h1 class="card-title"><?= $query->num_rows; ?></h1>
                             <p class="card-text">Female Employee</p>
                         </div>
                         <i class="material-icons" id="logo-display">woman</i>
                     </div>
                     <div class="card-footer text-center bg-light">
-                        <a href="#" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
+                        <a href="female_employee.php" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
                     </div>
                 </div>
                 <div class="card border-success mx-lg-3 p-0" id="cards">
                     <div class="display-cards">
                         <div class="card-body">
-                            <?php
-                            $sql = "SELECT * FROM attendance";
-                            $query = $conn->query($sql);
-                            ?>
+                            <?php if ($user['ROLE'] != 'SysAdmin') : ?>
+                                <?php
+                                $sql = "SELECT attendance.*
+                                        FROM attendance
+                                        INNER JOIN employees
+                                        ON attendance.EMP_NAME = CONCAT(employees.FNAME, ' ', employees.MI, ' ', employees.LNAME)
+                                        WHERE employees.DEPARTMENT = '{$user['ROLE']}'";
+                                $query = $conn->query($sql);
+                                ?>
+                            <?php else : ?>
+                                <?php
+                                $sql = "SELECT * FROM attendance";
+                                $query = $conn->query($sql);
+                                ?>
+                            <?php endif; ?>
                             <h1 class="card-title"><?= $query->num_rows; ?></h1>
                             <p class="card-text">Attendance</p>
                         </div>
@@ -110,54 +142,56 @@ include("templates/sidebar.php");
                         <a href="attendance.php" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
                     </div>
                 </div>
-                <div class="card border-success mx-lg-3 p-0" id="cards">
-                    <div class="display-cards">
-                        <div class="card-body">
-                            <?php
-                            $sql = "SELECT * FROM departments";
-                            $query = $conn->query($sql);
-                            ?>
-                            <h1 class="card-title"><?= $query->num_rows; ?></h1>
-                            <p class="card-text">Department</p>
+                <?php if ($user['ROLE'] == 'SysAdmin' || $user['ROLE'] == 'sysadmin') { ?>
+                    <div class="card border-success mx-lg-3 p-0" id="cards">
+                        <div class="display-cards">
+                            <div class="card-body">
+                                <?php
+                                $sql = "SELECT * FROM departments";
+                                $query = $conn->query($sql);
+                                ?>
+                                <h1 class="card-title"><?= $query->num_rows; ?></h1>
+                                <p class="card-text">Department</p>
+                            </div>
+                            <i class="material-icons" id="logo-display">map</i>
                         </div>
-                        <i class="material-icons" id="logo-display">map</i>
-                    </div>
-                    <div class="card-footer text-center bg-light">
-                        <a href="department.php" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
-                    </div>
-                </div>
-                <div class="card border-success mx-lg-3 p-0" id="cards">
-                    <div class="display-cards">
-                        <div class="card-body">
-                            <?php
-                            $sql = "SELECT * FROM roles";
-                            $query = $conn->query($sql);
-                            ?>
-                            <h1 class="card-title"><?= $query->num_rows; ?></h1>
-                            <p class="card-text">Role</p>
+                        <div class="card-footer text-center bg-light">
+                            <a href="department.php" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
                         </div>
-                        <i class="material-icons" id="logo-display">build</i>
                     </div>
-                    <div class="card-footer text-center bg-light">
-                        <a href="role.php" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
-                    </div>
-                </div>
-                <div class="card border-success mx-lg-3 p-0" id="cards">
-                    <div class="display-cards">
-                        <div class="card-body">
-                            <?php
-                            $sql = "SELECT * FROM admins";
-                            $query = $conn->query($sql);
-                            ?>
-                            <h1 class="card-title"><?= $query->num_rows; ?></h1>
-                            <p class="card-text">Admin</p>
+                    <div class="card border-success mx-lg-3 p-0" id="cards">
+                        <div class="display-cards">
+                            <div class="card-body">
+                                <?php
+                                $sql = "SELECT * FROM roles";
+                                $query = $conn->query($sql);
+                                ?>
+                                <h1 class="card-title"><?= $query->num_rows; ?></h1>
+                                <p class="card-text">Role</p>
+                            </div>
+                            <i class="material-icons" id="logo-display">build</i>
                         </div>
-                        <i class="material-icons" id="logo-display">admin_panel_settings</i>
+                        <div class="card-footer text-center bg-light">
+                            <a href="role.php" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
+                        </div>
                     </div>
-                    <div class="card-footer text-center bg-light">
-                        <a href="admin.php" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
+                    <div class="card border-success mx-lg-3 p-0" id="cards">
+                        <div class="display-cards">
+                            <div class="card-body">
+                                <?php
+                                $sql = "SELECT * FROM admins";
+                                $query = $conn->query($sql);
+                                ?>
+                                <h1 class="card-title"><?= $query->num_rows; ?></h1>
+                                <p class="card-text">Admin</p>
+                            </div>
+                            <i class="material-icons" id="logo-display">admin_panel_settings</i>
+                        </div>
+                        <div class="card-footer text-center bg-light">
+                            <a href="admin.php" class="text-success" style="text-decoration: none;">More info <i class="material-icons" id="material-icon">arrow_circle_right</i></a>
+                        </div>
                     </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
 

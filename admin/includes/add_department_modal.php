@@ -12,7 +12,7 @@
             <div class="col-sm-12 mb-3">
               <div class="form-group">
                 <label for="department_name" class="control-label">Department Name</label>
-                <input type="text" class="form-control" name="DEPARTMENT_NAME" placeholder="Department Name" oninput="this.value = this.value.replace(/[^A-Za-z]/g, '')">
+                <input type="text" class="form-control" name="DEPARTMENT_NAME" placeholder="Department Name">
               </div>
             </div>
 

@@ -6,6 +6,7 @@ include("templates/sidebar.php");
 ?>
 
 <!-- Page Content -->
+<?php if ($user['ROLE'] == "SysAdmin") { ?>
 <div id="content">
     <div class="container-fluid">
         <!-- added breadcrumb features -->
@@ -56,6 +57,10 @@ include("templates/sidebar.php");
         </div>
     </div>
 </div>
+<?php } else { ?>
+    <?php echo 'Page not found'; ?>
+<?php } ?>
+
 
 <?php
 include("includes/add_admin_modal.php");

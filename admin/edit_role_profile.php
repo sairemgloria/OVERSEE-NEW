@@ -61,7 +61,7 @@ if (isset($_GET["q"])) {
                                 <div class="form-group">
                                     <label for="department_designated" class="control-label">Department Designated</label>
                                     <select name="DEPT_DESIGNATED" class="form-control">
-                                        <option disabled selected value="<?= $row['DEPT_DESIGNATED']; ?>"><?= $row['DEPT_DESIGNATED']; ?> (Current
+                                        <option selected value="<?= $row['DEPT_DESIGNATED']; ?>"><?= $row['DEPT_DESIGNATED']; ?> (Current
                                             selected)</option>
                                         <?php include("includes/selecting_department.php"); ?>
                                     </select>

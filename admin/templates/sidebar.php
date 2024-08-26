@@ -17,6 +17,7 @@
         </div>
         <!-- added toggle drop down button -->
         <hr>
+        <?php if ($user['ROLE'] == 'SysAdmin' || $user['ROLE'] == 'sysadmin') : ?>
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link" id="sidebar-link" href="dashboard.php"><i class="material-icons">dashboard</i> Dashboard</a>
@@ -37,4 +38,17 @@
                 <a class="nav-link" id="sidebar-link" href="admin.php"><i class="material-icons">admin_panel_settings</i> Admin</a>
             </li>
         </ul>
+        <?php else : ?>
+            <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" id="sidebar-link" href="dashboard.php"><i class="material-icons">dashboard</i> Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="sidebar-link" href="attendance.php"><i class="material-icons">calendar_month</i> Attendance</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="sidebar-link" href="employee.php"><i class="material-icons">groups</i> Employee</a>
+            </li>
+        </ul>
+        <?php endif; ?>
     </div>

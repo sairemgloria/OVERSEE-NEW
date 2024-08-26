@@ -10,21 +10,39 @@ if ($query) {
     // Fetch each row from the query result
     while ($row = $query->fetch_assoc()) {
 ?>
-        <tr>
-            <td style="text-align: center; vertical-align: middle;"><?= $count++; ?></td>
-            <td style="text-align: center; vertical-align: middle;">
-                <img src="./assets/images/<?= empty($row["PROFILE"]) ? "default.jpg" : "../uploads/" . $row["PROFILE"]; ?>" width="50" height="50" alt="...">
-            </td>
-            <td style="text-align: center; vertical-align: middle;"><?= $row["FNAME"] . " " . $row["MI"] . " " . $row["LNAME"]; ?></td>
-            <td style="text-align: center; vertical-align: middle;"><?= $row["DEPARTMENT"]; ?></td>
-            <td style="text-align: center; vertical-align: middle;"><?= $row["ROLE"]; ?></td>
-            <td style="text-align: center; vertical-align: middle;">
-                <div class="btn-group btn-group-sm p-2">
-                    <a href="view_attendance.php?q=<?= $row['ID']; ?>" class="btn btn-success"><i class="material-icons" id="material-icon">visibility</i></a>
-                    <!-- <a href="./includes/#?q=<?= $row['ID']; ?>" onclick="confirmDeleteAdmin(event, <?= $row['ID']; ?>);" class="btn btn-danger"><i class="material-icons" id="material-icon">delete</i></a> -->
-                </div>
-            </td>
-        </tr>
+        <?php if ($user['ROLE'] == $row['DEPARTMENT']) { ?>
+            <tr>
+                <td style="text-align: center; vertical-align: middle;"><?= $count++; ?></td>
+                <td style="text-align: center; vertical-align: middle;">
+                    <img src="./assets/images/<?= empty($row["PROFILE"]) ? "default.jpg" : "../uploads/" . $row["PROFILE"]; ?>" width="50" height="50" alt="...">
+                </td>
+                <td style="text-align: center; vertical-align: middle;"><?= $row["FNAME"] . " " . $row["MI"] . " " . $row["LNAME"]; ?></td>
+                <td style="text-align: center; vertical-align: middle;"><?= $row["DEPARTMENT"]; ?></td>
+                <td style="text-align: center; vertical-align: middle;"><?= $row["ROLE"]; ?></td>
+                <td style="text-align: center; vertical-align: middle;">
+                    <div class="btn-group btn-group-sm p-2">
+                        <a href="view_attendance.php?q=<?= $row['ID']; ?>" class="btn btn-success"><i class="material-icons" id="material-icon">visibility</i></a>
+                        <!-- <a href="./includes/#?q=<?= $row['ID']; ?>" onclick="confirmDeleteAdmin(event, <?= $row['ID']; ?>);" class="btn btn-danger"><i class="material-icons" id="material-icon">delete</i></a> -->
+                    </div>
+                </td>
+            </tr>
+        <?php } else if ($user['ROLE'] == "SysAdmin") { ?>
+            <tr>
+                <td style="text-align: center; vertical-align: middle;"><?= $count++; ?></td>
+                <td style="text-align: center; vertical-align: middle;">
+                    <img src="./assets/images/<?= empty($row["PROFILE"]) ? "default.jpg" : "../uploads/" . $row["PROFILE"]; ?>" width="50" height="50" alt="...">
+                </td>
+                <td style="text-align: center; vertical-align: middle;"><?= $row["FNAME"] . " " . $row["MI"] . " " . $row["LNAME"]; ?></td>
+                <td style="text-align: center; vertical-align: middle;"><?= $row["DEPARTMENT"]; ?></td>
+                <td style="text-align: center; vertical-align: middle;"><?= $row["ROLE"]; ?></td>
+                <td style="text-align: center; vertical-align: middle;">
+                    <div class="btn-group btn-group-sm p-2">
+                        <a href="view_attendance.php?q=<?= $row['ID']; ?>" class="btn btn-success"><i class="material-icons" id="material-icon">visibility</i></a>
+                        <!-- <a href="./includes/#?q=<?= $row['ID']; ?>" onclick="confirmDeleteAdmin(event, <?= $row['ID']; ?>);" class="btn btn-danger"><i class="material-icons" id="material-icon">delete</i></a> -->
+                    </div>
+                </td>
+            </tr>
+        <?php } ?>
 <?php
     }
 } else {

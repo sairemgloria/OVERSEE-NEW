@@ -72,7 +72,8 @@ if (isset($_GET["q"])) {
                                     <select name="ROLE" class="form-control">
                                         <option selected value="<?= $row['ROLE']; ?>"><?= $row['ROLE']; ?> (Current
                                             selected)</option>
-                                        <option value="SysAdmin"">System Administrator</option>
+                                            <option value="SysAdmin"">System Administrator</option>
+                                            <?php include("includes/selecting_department.php"); ?>
                                     </select>
                                 </div>
                             </div>
