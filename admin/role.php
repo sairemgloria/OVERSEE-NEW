@@ -59,7 +59,6 @@ include("templates/sidebar.php");
     <?php echo 'Page not found'; ?>
 <?php } ?>
 
-
 <?php
 include("includes/add_role_modal.php");
 include("templates/footer.php");
