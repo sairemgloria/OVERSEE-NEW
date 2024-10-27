@@ -19,16 +19,17 @@ function checkEmptyFieldsAndRedirectUserLogin($EMAIL, $PASSWORD) {
 }
 
 function checkCredentialsAndRedirectUserLogin($EMAIL, $PASSWORD, $conn) {
-    $sql = "SELECT * FROM employees WHERE EMAIL='$EMAIL' AND PASSWORD='$PASSWORD'";
+   // Hash the entered password
+   $hashedPassword = md5($PASSWORD);
+
+   $sql = "SELECT * FROM employees WHERE EMAIL='$EMAIL' AND PASSWORD='$hashedPassword'";
     $query = $conn->query($sql);
 
     if ($query->num_rows > 0) {
         $user_row = $query->fetch_assoc();
-        if ($EMAIL === $user_row['EMAIL'] && $PASSWORD === $user_row['PASSWORD']) {
-            $_SESSION['user'] = $user_row['ID'];
-            header("Location: ../user_dashboard.php");
-            exit();
-        }
+        $_SESSION['user'] = $user_row['ID'];
+        header("Location: ../user_dashboard.php");
+        exit();
     }
 
     $_SESSION["error"] = "Email or password is incorrect";
@@ -38,7 +39,7 @@ function checkCredentialsAndRedirectUserLogin($EMAIL, $PASSWORD, $conn) {
 
 if (isset($_POST['login'])) {
     $EMAIL = $_POST['EMAIL'];
-    $PASSWORD = md5($_POST['PASSWORD']);
+    $PASSWORD = $_POST['PASSWORD'];
 
     checkEmptyFieldsAndRedirectUserLogin($EMAIL, $PASSWORD);
     checkCredentialsAndRedirectUserLogin($EMAIL, $PASSWORD, $conn);

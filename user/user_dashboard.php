@@ -15,7 +15,7 @@ include("templates/sidebar.php");
             </div>
             <div class="col-sm-6" id="breadcrumb-align-center">
                 <ol class="breadcrumb float-sm-right my-0 my-md-3 my-lg-3">
-                    <li class="breadcrumb-item"><a href="#" style="text-decoration: none;"></a> Attendance</li>
+                    <li class="breadcrumb-item"><a href="user_dashboard.php" style="text-decoration: none;">Home</a></li>
                     <li class="breadcrumb-item active">My Profile</li>
                 </ol>
             </div>
