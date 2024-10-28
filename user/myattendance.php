@@ -9,7 +9,7 @@ include("templates/sidebar.php");
 <div id="content">
    <div class="container-fluid">
       <!-- added breadcrumb features -->
-      <div class="row">
+      <div class="row gap-3">
          <div class="col-sm-6">
             <h1 class="my-0 my-md-3 my-lg-3 fw-bold"><span class="dashboard-span fw-bold">|</span> View Attendance</h1>
          </div>

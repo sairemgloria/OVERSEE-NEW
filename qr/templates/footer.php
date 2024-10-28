@@ -4,7 +4,8 @@
 
     <!-- AJAX Tables -->
     <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
-    <!-- <script src="assets/js/attendance_tables.js"></script> -->
+    <script src="assets/js/attendance_tables.js"></script>
+    <script src="assets/js/camera.js"></script>
 
 </body>
 

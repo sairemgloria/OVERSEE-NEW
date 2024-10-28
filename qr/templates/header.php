@@ -1,3 +1,7 @@
+<?php 
+// session_start();
+date_default_timezone_set("Asia/Manila");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +20,9 @@
 
     <!-- Sweetalert2 JS -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- instascan -->
+     <script src="assets/js/instascan/instascan.min.js"></script>
 
 </head>
 
