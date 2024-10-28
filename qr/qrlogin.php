@@ -33,7 +33,7 @@ session_start(); // THIS CODE IS FOR THE LOGIN NOTIFICATION IF VALID USER OR NOT
             echo '<div class="alert alert-danger font-small mb-4">' . $_SESSION["error"] . '</div>';
             unset($_SESSION["error"]); // CLEAR THE ERROR MESSAGE AFTER DISPLAYING IT
           } ?>
-          <form action="check_login.php" method="POST" autocomplete="off">
+          <form action="./includes/qr_check_login.php" method="POST" autocomplete="off">
             <div class="mb-3">
               <label class="form-label">Username</label>
               <input type="text" name="USERNAME" class="form-control" placeholder="qrscan">

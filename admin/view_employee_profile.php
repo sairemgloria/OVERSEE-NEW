@@ -155,7 +155,7 @@ if (isset($_GET["q"])) {
                                                 $isActivated = ($row["OT"] === "Activated");
                                                 $fontColor = ($isActivated) ? "green" : "gray";
                                                 ?>
-                                                <form action="includes/update_employee_overtime.php" method="POST" enctype="multipart/form-data" id="OT_FORM">
+                                                <form action="./includes/update_employee_overtime.php" method="POST" enctype="multipart/form-data" id="OT_FORM">
                                                     <!-- Add the ID input field -->
                                                     <input type="hidden" name="ID" value="<?= $row["ID"]; ?>">
                                                     <div class="form-check form-switch">

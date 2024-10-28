@@ -11,24 +11,28 @@ include("templates/sidebar.php");
         <?php
         # Use this code for debugging :)
         # This is used only for displaying the arrays of $database.
-        echo 'Database Information :';
-        echo '<pre>';
-        print_r($database);
-        echo '</pre>';
+        // echo 'Database Information :';
+        // echo '<pre>';
+        // print_r($database);
+        // echo '</pre>';
 
         # Use this code for debugging :)
         # This is used only for displaying the arrays of $user.
-        echo 'User Information :';
-        echo '<pre>';
-        print_r($user);
-        echo '</pre>';
+        // echo 'User Information :';
+        // echo '<pre>';
+        // print_r($user);
+        // echo '</pre>';
 
         # Use this code for debugging :)
         # This is used only for displaying the arrays of $_SESSION.
-        echo 'Session Information :';
-        echo '<pre>';
-        print_r($_SESSION);
-        echo '</pre>';
+        // echo 'Session Information :';
+        // echo '<pre>';
+        // print_r($_SESSION);
+        // echo '</pre>';
+        ?>
+        <?php
+        // THIS CODE BELOW DISPLAY THE ERROR MESSAGE OF FIELDS ARE NEEDED TO FILLED UP
+        include("includes/toast_notification.php");
         ?>
         <!-- added breadcrumb features -->
         <div class="row">
@@ -194,12 +198,6 @@ include("templates/sidebar.php");
                 <?php } ?>
             </div>
         </div>
-
-        <hr class="hr-element">
-
-        <p class="sample-text pt-4">This is a responsive Bootstrap 5 admin template. The sidebar transforms into a top navbar on smaller screens.</p>
-        <p class="sample-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe consequatur, maxime ullam in veniam velit aspernatur esse tenetur voluptas odio temporibus dignissimos voluptatem iste similique minus dolore fugit beatae sapiente.
-            Dolor fuga voluptatibus, ipsa deserunt eius officia blanditiis optio in nesciunt doloremque illum accusamus odio iure, praesentium, consectetur hic esse tempore! Suscipit consectetur neque officia recusandae magni, atque distinctio sapiente.</p>
     </div>
 </div>
 

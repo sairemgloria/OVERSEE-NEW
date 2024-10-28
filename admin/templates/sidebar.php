@@ -10,7 +10,7 @@
         </a>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
             <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editInfo">Edit Information</a></li>
-            <li><a class="dropdown-item" href="#">Update Profile</a></li>
+            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#updateDPModal">Update Profile</a></li>
             <li><a class="dropdown-item" href="#" role="switch" id="flexSwitchCheckChecked" checked onclick="myFunction()"> Light / Dark Mode</a></li>
             <li><a class="dropdown-item" href="includes/admin_logout.php">Sign Out</a></li>
         </ul>

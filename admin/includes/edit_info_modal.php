@@ -9,20 +9,20 @@
       <div class="modal-body">
         <form class="form-horizontal" method="POST" action="./includes/edit_info_func.php" autocomplete="off">
 
-          <input type="TEXT" name="ID" value="<?= $user['ID']; ?>" readonly>
+          <input type="text" name="ID" value="<?= $user['ID']; ?>" readonly>
 
           <div class="row">
             <div class="col-sm-12 mb-3">
               <div class="form-group">
                 <label for="name" class="control-label">Name</label>
-                <input type="text" class="form-control" name="NAME" placeholder="Name" value="<?php echo $user['NAME']; ?>" required>
+                <input type="text" class="form-control" name="NAME" placeholder="Name" value="<?php echo $user['NAME']; ?>">
               </div>
             </div>
 
             <div class="col-sm-12 mb-3">
               <div class="form-group">
                 <label for="username" class="control-label">Username</label>
-                <input type="text" class="form-control" name="USERNAME" placeholder="Username" value="<?php echo $user['USERNAME']; ?>" required>
+                <input type="text" class="form-control" name="USERNAME" placeholder="Username" value="<?php echo $user['USERNAME']; ?>">
               </div>
             </div>
 
@@ -36,7 +36,7 @@
 
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" name="UPDATE" class="btn btn-primary">Update</button>
+            <button type="submit" name="update" class="btn btn-primary">Update</button>
           </div>
 
         </form>

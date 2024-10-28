@@ -1,4 +1,7 @@
-<?php require('./includes/edit_info_modal.php'); ?>
+<?php 
+include('./includes/update_admin_profile_dp_modal.php');
+include('./includes/edit_info_modal.php'); 
+?>
 
 <!-- Bootstrap JS and dependencies -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
