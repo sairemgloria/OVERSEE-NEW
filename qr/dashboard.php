@@ -11,6 +11,7 @@
                <center>
                   <h5 class="card-title">Scan QR Code</h5>
                </center>
+               <hr>
                <video id="preview" width="100%" style="border-radius:5px;"></video>
             </div>
          </div>
